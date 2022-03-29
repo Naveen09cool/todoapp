@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div id="appName">
+        <h1>todoTracker</h1>
+    </div>
+    
+    <div id="main-container">
+        <!-- ACTIONS -->
+        <div id="action-container">
+
+            <form action="/create-task" method="POST">
+                <input type="text" name = "description" placeholder="Enter Task" required>               
+                <select name="category" placeholder="Select Category" required>
+                    <option>Personal</option>
+                    <option>Office Work</option>
+                    <option>Gym</option>
+                    <option>Others</option>
+                </select>
+                <input type="date" name="date" placeholder="Date" required>
+                <button type="submit">+ADD</button>
+            </form>
+            <!-- <script type="text/javascript"src="/js/home.js"></script> -->
+        </div>
+        <!-- VIEWS -->
+        <div id="list-container">
+            <form action="/delete-task" method="GET">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Select</th>
+                            <th>Task</th>
+                            <th>Category</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(let i of task) { %>
+                            
+                                <tr>
+                                    <td><input type="checkbox" name="<%= i._id %>"></td>
+                                    <td><p id="task-description"><%= i.description %></p></td>
+                                    <td><p id="task-category"><%= i.category %></p></td>
+                                    <td><p id="due-date"><%= i.date %></p></td>
+                                </tr>
+                                                        
+                        <% } %>
+                    </tbody>                    
+                </table>
+                <div><input type="submit" class="btn btn-danger" value="DELETE TASK"></div>
+            </form>  
+        </div>        
+    </div>
+
+    <script type="text/javascript"src="/js/home.js"></script>
+</body>
+</html>

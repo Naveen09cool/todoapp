@@ -1,0 +1,83 @@
+body{
+    text-align: center;
+    /* background-image: linear-gradient(to right bottom, #f89da6, #f1aa93, #e1b98e, #cdc698, #bcd0ac, #abd5bb, #9dd9cd, #97dbe1, #90d8f7, #a3d1ff, #cac5ff, #f6b6f6); */
+    font-family: sans-serif;
+    background-color: #D6E6F2;
+    
+}
+#appName{
+    color: #ffffff;
+    font-family: 'Pacifico', cursive;
+}
+#main-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgb(211, 128, 4); */
+}
+#action-container{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#list-container{
+    margin-top: 40px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: larger;
+}
+/* .heading_table{
+    display: flex;
+    justify-content: space-around;
+}
+.heading_table p{
+    font-size: larger;
+    padding: 20px;
+} */
+
+#datePicker {
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: rgb(250, 244, 244);
+    padding: 3px 5px;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.096);
+    width: 190px;
+  }
+.table{
+    border: 2px solid blue;
+    /* border-radius: 20px ;     */
+  }
+/* th, td {
+    padding-left: 30px;
+    padding-right: 40px;
+    border-bottom: 2px solid rgb(29, 2, 56);
+} */
+
+
+
+
+/* .task{
+    display: inline-flex;
+    justify-content: space-around;
+}
+.category{
+    display: inline-flex;
+    justify-content: space-around;
+}
+.status{
+    display: inline-flex;
+    justify-content: space-around;
+}
+.delete{
+    display: inline-flex;
+    justify-content: space-around;
+}  */
+
+
+
