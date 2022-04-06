@@ -1,7 +1,7 @@
 // For setting up express Server 
 const express = require('express');
 // for setting port number 
-const port = 8000;
+const port = 8001;
 // importing DB
 const db = require('./config/mongoose');
 // importing schema
@@ -10,7 +10,7 @@ const db = require('./config/mongoose');
 const app = express();
 // for static file
 app.use(express.static('./assets'));
-//for using encrypted data
+//for using encrypted data, for reading through post request
 app.use(express.urlencoded());
 //for view engine
 app.set('view engine', 'ejs');
