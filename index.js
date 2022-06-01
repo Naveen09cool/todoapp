@@ -1,7 +1,7 @@
 // For setting up express Server 
 const express = require('express');
 // for setting port number 
-const port = 8001;
+const port = process.env.PORT||8000;
 // importing DB
 const db = require('./config/mongoose');
 // importing schema
