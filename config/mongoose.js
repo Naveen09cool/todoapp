@@ -1,7 +1,10 @@
 // require the library
 const mongoose = require('mongoose');
+
+require('dotenv').config();
+
 // connecting database
-mongoose.connect('mongodb+srv://admin-naveen:TestAdmin123@cluster0.ckkx28k.mongodb.net/?retryWrites=true&w=majority');
+mongoose.connect(process.env.MONGO_CONNECT);
 
 // aquire the connection
 const db = mongoose.connection;
